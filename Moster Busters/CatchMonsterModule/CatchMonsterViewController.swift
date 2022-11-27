@@ -60,7 +60,7 @@ private extension CatchMonsterViewController {
         let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [0.3, 0.3])
         arView.scene.addAnchor(anchor)
         var modelIsLoaded: AnyCancellable? = nil
-        modelIsLoaded = ModelEntity.loadModelAsync(named: "robot")
+        modelIsLoaded = ModelEntity.loadModelAsync(named: "warrior")
             .collect()
             .sink(receiveCompletion: { error in
                 print("Error:", error)
@@ -71,6 +71,16 @@ private extension CatchMonsterViewController {
                     entity.generateCollisionShapes(recursive: true)
                     entity.position = [0, 0, -1]
                     anchor.addChild(entity)
+
+                    let entityBoundingBox = entity.visualBounds(relativeTo: anchor)
+                    let boundingRadius = entityBoundingBox.boundingRadius * 2
+                    print(boundingRadius)
+                    let textMaterial = SimpleMaterial(color: .black, isMetallic: false)
+                    let textEntity = ModelEntity(mesh: .generateText("Robot, 20 lvl", extrusionDepth: 0.1, font: .boldSystemFont(ofSize: 4), containerFrame: .zero, alignment: .left, lineBreakMode: .byWordWrapping), materials: [textMaterial])
+                    textEntity.setScale(SIMD3<Float>(0.5, 0.5, 0.5), relativeTo: entity)
+                    textEntity.position = [-boundingRadius/4, boundingRadius/1.2, -1]
+                    anchor.addChild(textEntity)
+
                 }
                 modelIsLoaded?.cancel()
             })
@@ -81,8 +91,8 @@ private extension CatchMonsterViewController {
                 self?.searchingForMonsterLabel.isHidden = true
                 self?.catchButtonLabel.isHidden = false
            }
+            self?.anchorIsActive.cancel()
         }
-
     }
 
 }

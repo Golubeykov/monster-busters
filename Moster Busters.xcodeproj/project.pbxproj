@@ -15,6 +15,8 @@
 		3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851A62933C75700FA16E8 /* ColorsStorage.swift */; };
 		3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851A82933DCBB00FA16E8 /* robot.usdz */; };
 		3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */; };
+		3A8851AE2933FFE400FA16E8 /* drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851AD2933FFE400FA16E8 /* drummer.usdz */; };
+		3A8851B0293404E300FA16E8 /* warrior.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851AF293404E300FA16E8 /* warrior.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		3A8851A62933C75700FA16E8 /* ColorsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsStorage.swift; sourceTree = "<group>"; };
 		3A8851A82933DCBB00FA16E8 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
 		3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopViewController.swift; sourceTree = "<group>"; };
+		3A8851AD2933FFE400FA16E8 /* drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = drummer.usdz; sourceTree = "<group>"; };
+		3A8851AF293404E300FA16E8 /* warrior.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = warrior.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				3A8851A82933DCBB00FA16E8 /* robot.usdz */,
+				3A8851AD2933FFE400FA16E8 /* drummer.usdz */,
+				3A8851AF293404E300FA16E8 /* warrior.usdz */,
 			);
 			path = Monsters3DModels;
 			sourceTree = "<group>";
@@ -177,10 +183,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8851B0293404E300FA16E8 /* warrior.usdz in Resources */,
 				3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */,
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
 				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
 				3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */,
+				3A8851AE2933FFE400FA16E8 /* drummer.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
