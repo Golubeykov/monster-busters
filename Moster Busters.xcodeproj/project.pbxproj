@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88516929323ED500FA16E8 /* AppDelegate.swift */; };
-		3A88516C29323ED500FA16E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88516B29323ED500FA16E8 /* ViewController.swift */; };
-		3A88516E29323ED500FA16E8 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 3A88516D29323ED500FA16E8 /* Experience.rcproject */; };
-		3A88517129323ED500FA16E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88516F29323ED500FA16E8 /* Main.storyboard */; };
 		3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517229323ED700FA16E8 /* Assets.xcassets */; };
 		3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517429323ED700FA16E8 /* LaunchScreen.storyboard */; };
+		3A88517F2932400E00FA16E8 /* CatchMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88517D2932400E00FA16E8 /* CatchMonsterViewController.swift */; };
+		3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517E2932400E00FA16E8 /* CatchMonsterViewController.xib */; };
+		3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851A62933C75700FA16E8 /* ColorsStorage.swift */; };
+		3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851A82933DCBB00FA16E8 /* robot.usdz */; };
+		3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A88516629323ED500FA16E8 /* Moster Busters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moster Busters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88516929323ED500FA16E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A88516B29323ED500FA16E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A88516D29323ED500FA16E8 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		3A88517029323ED500FA16E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A88517229323ED700FA16E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A88517529323ED700FA16E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A88517D2932400E00FA16E8 /* CatchMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchMonsterViewController.swift; sourceTree = "<group>"; };
+		3A88517E2932400E00FA16E8 /* CatchMonsterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatchMonsterViewController.xib; sourceTree = "<group>"; };
+		3A8851A62933C75700FA16E8 /* ColorsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsStorage.swift; sourceTree = "<group>"; };
+		3A8851A82933DCBB00FA16E8 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,63 @@
 			isa = PBXGroup;
 			children = (
 				3A88516929323ED500FA16E8 /* AppDelegate.swift */,
-				3A88516B29323ED500FA16E8 /* ViewController.swift */,
-				3A88516D29323ED500FA16E8 /* Experience.rcproject */,
-				3A88516F29323ED500FA16E8 /* Main.storyboard */,
+				3A8851812932408000FA16E8 /* Application */,
+				3A8851A42933C73300FA16E8 /* Storages */,
+				3A8851A12933C61300FA16E8 /* Monsters3DModels */,
+				3A88517C29323FF000FA16E8 /* CatchMonsterModule */,
+				3A8851AA2933EC1000FA16E8 /* Extensions */,
+			);
+			path = "Moster Busters";
+			sourceTree = "<group>";
+		};
+		3A88517C29323FF000FA16E8 /* CatchMonsterModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A88517D2932400E00FA16E8 /* CatchMonsterViewController.swift */,
+				3A88517E2932400E00FA16E8 /* CatchMonsterViewController.xib */,
+			);
+			path = CatchMonsterModule;
+			sourceTree = "<group>";
+		};
+		3A8851812932408000FA16E8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				3A88517229323ED700FA16E8 /* Assets.xcassets */,
 				3A88517429323ED700FA16E8 /* LaunchScreen.storyboard */,
 			);
-			path = "Moster Busters";
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3A8851A12933C61300FA16E8 /* Monsters3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851A82933DCBB00FA16E8 /* robot.usdz */,
+			);
+			path = Monsters3DModels;
+			sourceTree = "<group>";
+		};
+		3A8851A42933C73300FA16E8 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851A52933C74500FA16E8 /* ColorsStorage */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
+		3A8851A52933C74500FA16E8 /* ColorsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851A62933C75700FA16E8 /* ColorsStorage.swift */,
+			);
+			path = ColorsStorage;
+			sourceTree = "<group>";
+		};
+		3A8851AA2933EC1000FA16E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */,
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
+				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
 				3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */,
-				3A88517129323ED500FA16E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,23 +191,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A88516C29323ED500FA16E8 /* ViewController.swift in Sources */,
+				3A88517F2932400E00FA16E8 /* CatchMonsterViewController.swift in Sources */,
+				3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */,
 				3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */,
-				3A88516E29323ED500FA16E8 /* Experience.rcproject in Sources */,
+				3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A88516F29323ED500FA16E8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A88517029323ED500FA16E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A88517429323ED700FA16E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -214,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -290,11 +338,11 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +350,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Golubeykov.Moster-Busters";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,11 +371,11 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,9 +383,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Golubeykov.Moster-Busters";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

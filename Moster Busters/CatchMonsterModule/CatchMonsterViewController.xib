@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CatchMonsterViewController" customModule="Moster_Busters" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="xb8-Kx-r94" id="7Ts-aC-xeU"/>
+                <outlet property="arView" destination="gUz-Aq-1Pr" id="2ET-Sx-y0y"/>
+                <outlet property="catchButtonLabel" destination="cjL-tV-ata" id="qbg-G8-SS4"/>
+                <outlet property="searchingForMonsterLabel" destination="tCI-3P-QZc" id="79V-j5-I8t"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-Aq-1Pr">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </arView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-tV-ata">
+                    <rect key="frame" x="82" y="723" width="229" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="Gpq-JJ-4Jp"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Поймать"/>
+                    <connections>
+                        <action selector="catchButtonAction:" destination="-1" eventType="touchUpInside" id="agy-XJ-Xvz"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xb8-Kx-r94">
+                    <rect key="frame" x="186.66666666666666" y="109" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск монстра" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCI-3P-QZc">
+                    <rect key="frame" x="100" y="159" width="193" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cjL-tV-ata" secondAttribute="trailing" constant="82" id="DXD-To-83S"/>
+                <constraint firstItem="xb8-Kx-r94" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ewe-qL-H9y"/>
+                <constraint firstItem="cjL-tV-ata" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="82" id="Gro-Mf-xud"/>
+                <constraint firstAttribute="bottom" secondItem="cjL-tV-ata" secondAttribute="bottom" constant="78" id="Jbf-Sm-TYV"/>
+                <constraint firstItem="tCI-3P-QZc" firstAttribute="top" secondItem="xb8-Kx-r94" secondAttribute="bottom" constant="30" id="OXU-hu-LGW"/>
+                <constraint firstItem="gUz-Aq-1Pr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="P6U-cy-bGx"/>
+                <constraint firstItem="gUz-Aq-1Pr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qq2-we-yrG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gUz-Aq-1Pr" secondAttribute="trailing" id="SJ8-ju-676"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tCI-3P-QZc" secondAttribute="trailing" constant="100" id="Xub-n2-He7"/>
+                <constraint firstItem="xb8-Kx-r94" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="ewv-xt-goH"/>
+                <constraint firstAttribute="bottom" secondItem="gUz-Aq-1Pr" secondAttribute="bottom" id="iNO-Qm-6BN"/>
+                <constraint firstItem="tCI-3P-QZc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="ssn-UM-1Mj"/>
+            </constraints>
+            <point key="canvasLocation" x="48" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
