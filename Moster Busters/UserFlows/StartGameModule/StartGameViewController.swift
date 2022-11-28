@@ -36,12 +36,12 @@ private extension StartGameViewController {
     func checkLocationServices() {
         DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled() {
-                DispatchQueue.main.async {
-                    self.checkLocationAuthorization()
+                DispatchQueue.main.async { [weak self] in
+                    self?.checkLocationAuthorization()
                 }
             } else {
-                DispatchQueue.main.async {
-                    self.showAlertForTurningOnLocation()
+                DispatchQueue.main.async { [weak self] in
+                    self?.showAlertForTurningOnLocation()
                 }
             }
         }
