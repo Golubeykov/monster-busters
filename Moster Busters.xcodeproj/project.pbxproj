@@ -17,6 +17,11 @@
 		3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */; };
 		3A8851AE2933FFE400FA16E8 /* drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851AD2933FFE400FA16E8 /* drummer.usdz */; };
 		3A8851B0293404E300FA16E8 /* warrior.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851AF293404E300FA16E8 /* warrior.usdz */; };
+		3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851BA293543DE00FA16E8 /* MapViewController.swift */; };
+		3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851BB293543DE00FA16E8 /* MapViewController.xib */; };
+		3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851BF2935479400FA16E8 /* StartGameViewController.swift */; };
+		3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851C02935479400FA16E8 /* StartGameViewController.xib */; };
+		3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C429354BB600FA16E8 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopViewController.swift; sourceTree = "<group>"; };
 		3A8851AD2933FFE400FA16E8 /* drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = drummer.usdz; sourceTree = "<group>"; };
 		3A8851AF293404E300FA16E8 /* warrior.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = warrior.usdz; sourceTree = "<group>"; };
+		3A8851BA293543DE00FA16E8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3A8851BB293543DE00FA16E8 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		3A8851BF2935479400FA16E8 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		3A8851C02935479400FA16E8 /* StartGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGameViewController.xib; sourceTree = "<group>"; };
+		3A8851C429354BB600FA16E8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +73,11 @@
 		3A88516829323ED500FA16E8 /* Moster Busters */ = {
 			isa = PBXGroup;
 			children = (
+				3A8851C329354BA800FA16E8 /* SupportingViews */,
 				3A88516929323ED500FA16E8 /* AppDelegate.swift */,
 				3A8851812932408000FA16E8 /* Application */,
+				3A8851B9293543AF00FA16E8 /* UserFlows */,
 				3A8851A42933C73300FA16E8 /* Storages */,
-				3A8851A12933C61300FA16E8 /* Monsters3DModels */,
-				3A88517C29323FF000FA16E8 /* CatchMonsterModule */,
 				3A8851AA2933EC1000FA16E8 /* Extensions */,
 			);
 			path = "Moster Busters";
@@ -104,6 +114,7 @@
 		3A8851A42933C73300FA16E8 /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				3A8851A12933C61300FA16E8 /* Monsters3DModels */,
 				3A8851A52933C74500FA16E8 /* ColorsStorage */,
 			);
 			path = Storages;
@@ -123,6 +134,42 @@
 				3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3A8851B8293543A300FA16E8 /* MapModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851BA293543DE00FA16E8 /* MapViewController.swift */,
+				3A8851BB293543DE00FA16E8 /* MapViewController.xib */,
+			);
+			path = MapModule;
+			sourceTree = "<group>";
+		};
+		3A8851B9293543AF00FA16E8 /* UserFlows */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851BE2935477B00FA16E8 /* StartGameModule */,
+				3A8851B8293543A300FA16E8 /* MapModule */,
+				3A88517C29323FF000FA16E8 /* CatchMonsterModule */,
+			);
+			path = UserFlows;
+			sourceTree = "<group>";
+		};
+		3A8851BE2935477B00FA16E8 /* StartGameModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851BF2935479400FA16E8 /* StartGameViewController.swift */,
+				3A8851C02935479400FA16E8 /* StartGameViewController.xib */,
+			);
+			path = StartGameModule;
+			sourceTree = "<group>";
+		};
+		3A8851C329354BA800FA16E8 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851C429354BB600FA16E8 /* AlertView.swift */,
+			);
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +233,9 @@
 				3A8851B0293404E300FA16E8 /* warrior.usdz in Resources */,
 				3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */,
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
+				3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */,
 				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
+				3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */,
 				3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */,
 				3A8851AE2933FFE400FA16E8 /* drummer.usdz in Resources */,
 			);
@@ -201,8 +250,11 @@
 			files = (
 				3A88517F2932400E00FA16E8 /* CatchMonsterViewController.swift in Sources */,
 				3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */,
+				3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */,
 				3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */,
+				3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */,
 				3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */,
+				3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +396,7 @@
 				DEVELOPMENT_TEAM = X6S824DCXB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Требуется для работы приложения";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -377,6 +430,7 @@
 				DEVELOPMENT_TEAM = X6S824DCXB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Требуется для работы приложения";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

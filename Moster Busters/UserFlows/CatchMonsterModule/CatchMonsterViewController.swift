@@ -9,7 +9,7 @@ import UIKit
 import RealityKit
 import Combine
 
-class CatchMonsterViewController: UIViewController {
+final class CatchMonsterViewController: UIViewController {
 
     // MARK: - IBOutlets
 

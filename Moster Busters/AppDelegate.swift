@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      }
      func runMainFlow() {
          DispatchQueue.main.async {
-             self.window?.rootViewController = CatchMonsterViewController()
+             self.window?.rootViewController = StartGameViewController()
          }
      }
 
