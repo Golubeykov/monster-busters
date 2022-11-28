@@ -22,6 +22,7 @@
 		3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851BF2935479400FA16E8 /* StartGameViewController.swift */; };
 		3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851C02935479400FA16E8 /* StartGameViewController.xib */; };
 		3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C429354BB600FA16E8 /* AlertView.swift */; };
+		3A8851C82935637F00FA16E8 /* GenerateRandomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		3A8851BF2935479400FA16E8 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		3A8851C02935479400FA16E8 /* StartGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGameViewController.xib; sourceTree = "<group>"; };
 		3A8851C429354BB600FA16E8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomAnnotations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +75,11 @@
 		3A88516829323ED500FA16E8 /* Moster Busters */ = {
 			isa = PBXGroup;
 			children = (
-				3A8851C329354BA800FA16E8 /* SupportingViews */,
 				3A88516929323ED500FA16E8 /* AppDelegate.swift */,
 				3A8851812932408000FA16E8 /* Application */,
 				3A8851B9293543AF00FA16E8 /* UserFlows */,
+				3A8851C62935636800FA16E8 /* Services */,
+				3A8851C329354BA800FA16E8 /* SupportingViews */,
 				3A8851A42933C73300FA16E8 /* Storages */,
 				3A8851AA2933EC1000FA16E8 /* Extensions */,
 			);
@@ -172,6 +175,14 @@
 			path = SupportingViews;
 			sourceTree = "<group>";
 		};
+		3A8851C62935636800FA16E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +263,7 @@
 				3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */,
 				3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */,
 				3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */,
+				3A8851C82935637F00FA16E8 /* GenerateRandomAnnotations.swift in Sources */,
 				3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */,
 				3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */,
 				3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */,

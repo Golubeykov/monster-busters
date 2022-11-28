@@ -17,12 +17,20 @@ final class MapViewController: UIViewController {
     // MARK: - Properties
 
     let notificationCenter = NotificationCenter.default
+    let locationManager = CLLocationManager()
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         addObserverToDetectIfAppMovedToForeground()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupMapView()
+        createRandomAnnotations()
     }
 
 }
@@ -30,6 +38,27 @@ final class MapViewController: UIViewController {
 // MARK: - Private extension
 
 private extension MapViewController {
+
+    func setupMapView() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            mapView.showsUserLocation = true
+            locationManager.delegate = self
+            centerOnUserLocation()
+    }
+
+    func createRandomAnnotations() {
+        if let location = locationManager.location {
+            GenerateRandomAnnotations.generateAnnoLoc(for: mapView, currentLocation: location)
+        }
+    }
+
+    func centerOnUserLocation() {
+      if let location = locationManager.location?.coordinate {
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let region = MKCoordinateRegion.init(center: location, span: span)
+        mapView.setRegion(region, animated: true)
+     }
+    }
 
     func addObserverToDetectIfAppMovedToForeground() {
         notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
@@ -54,6 +83,16 @@ private extension MapViewController {
                 delegate.window?.rootViewController = StartGameViewController
             }
         }
+    }
+
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension MapViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        centerOnUserLocation()
     }
 
 }
