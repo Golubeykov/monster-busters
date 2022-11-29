@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-A9-lXC">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monstersCatchedBackground" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-A9-lXC">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-vk-F0q">
@@ -51,7 +51,7 @@
         </view>
     </objects>
     <resources>
-        <image name="startScreenBackground" width="829" height="952"/>
+        <image name="monstersCatchedBackground" width="585" height="1517"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
