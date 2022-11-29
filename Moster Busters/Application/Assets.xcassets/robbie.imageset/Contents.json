@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "mockMonster.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -13,16 +13,23 @@
 		3A88517F2932400E00FA16E8 /* CatchMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88517D2932400E00FA16E8 /* CatchMonsterViewController.swift */; };
 		3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517E2932400E00FA16E8 /* CatchMonsterViewController.xib */; };
 		3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851A62933C75700FA16E8 /* ColorsStorage.swift */; };
-		3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851A82933DCBB00FA16E8 /* robot.usdz */; };
+		3A8851A92933DCBB00FA16E8 /* robbie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851A82933DCBB00FA16E8 /* robbie.usdz */; };
 		3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */; };
-		3A8851AE2933FFE400FA16E8 /* drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851AD2933FFE400FA16E8 /* drummer.usdz */; };
-		3A8851B0293404E300FA16E8 /* warrior.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851AF293404E300FA16E8 /* warrior.usdz */; };
 		3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851BA293543DE00FA16E8 /* MapViewController.swift */; };
 		3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851BB293543DE00FA16E8 /* MapViewController.xib */; };
 		3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851BF2935479400FA16E8 /* StartGameViewController.swift */; };
 		3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851C02935479400FA16E8 /* StartGameViewController.xib */; };
 		3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C429354BB600FA16E8 /* AlertView.swift */; };
 		3A8851C82935637F00FA16E8 /* GenerateRandomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */; };
+		3A8851CE29366A8A00FA16E8 /* ImageAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851CD29366A8A00FA16E8 /* ImageAnnotations.swift */; };
+		3A8851D829368E2100FA16E8 /* broodmother.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D129368E2000FA16E8 /* broodmother.usdz */; };
+		3A8851D929368E2100FA16E8 /* nevery.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D229368E2000FA16E8 /* nevery.usdz */; };
+		3A8851DB29368E2100FA16E8 /* choozie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D429368E2100FA16E8 /* choozie.usdz */; };
+		3A8851DC29368E2100FA16E8 /* knuckle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D529368E2100FA16E8 /* knuckle.usdz */; };
+		3A8851DD29368E2100FA16E8 /* imp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D629368E2100FA16E8 /* imp.usdz */; };
+		3A8851DE29368E2100FA16E8 /* tautau.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D729368E2100FA16E8 /* tautau.usdz */; };
+		3A8851E12936904700FA16E8 /* MonsterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E02936904700FA16E8 /* MonsterModel.swift */; };
+		3A8851E42936916A00FA16E8 /* MonstersCatched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E32936916A00FA16E8 /* MonstersCatched.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,16 +40,23 @@
 		3A88517D2932400E00FA16E8 /* CatchMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchMonsterViewController.swift; sourceTree = "<group>"; };
 		3A88517E2932400E00FA16E8 /* CatchMonsterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatchMonsterViewController.xib; sourceTree = "<group>"; };
 		3A8851A62933C75700FA16E8 /* ColorsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsStorage.swift; sourceTree = "<group>"; };
-		3A8851A82933DCBB00FA16E8 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		3A8851A82933DCBB00FA16E8 /* robbie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robbie.usdz; sourceTree = "<group>"; };
 		3A8851AB2933EC2500FA16E8 /* GetTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopViewController.swift; sourceTree = "<group>"; };
-		3A8851AD2933FFE400FA16E8 /* drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = drummer.usdz; sourceTree = "<group>"; };
-		3A8851AF293404E300FA16E8 /* warrior.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = warrior.usdz; sourceTree = "<group>"; };
 		3A8851BA293543DE00FA16E8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3A8851BB293543DE00FA16E8 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3A8851BF2935479400FA16E8 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		3A8851C02935479400FA16E8 /* StartGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGameViewController.xib; sourceTree = "<group>"; };
 		3A8851C429354BB600FA16E8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomAnnotations.swift; sourceTree = "<group>"; };
+		3A8851CD29366A8A00FA16E8 /* ImageAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnnotations.swift; sourceTree = "<group>"; };
+		3A8851D129368E2000FA16E8 /* broodmother.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = broodmother.usdz; sourceTree = "<group>"; };
+		3A8851D229368E2000FA16E8 /* nevery.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = nevery.usdz; sourceTree = "<group>"; };
+		3A8851D429368E2100FA16E8 /* choozie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = choozie.usdz; sourceTree = "<group>"; };
+		3A8851D529368E2100FA16E8 /* knuckle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = knuckle.usdz; sourceTree = "<group>"; };
+		3A8851D629368E2100FA16E8 /* imp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = imp.usdz; sourceTree = "<group>"; };
+		3A8851D729368E2100FA16E8 /* tautau.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tautau.usdz; sourceTree = "<group>"; };
+		3A8851E02936904700FA16E8 /* MonsterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterModel.swift; sourceTree = "<group>"; };
+		3A8851E32936916A00FA16E8 /* MonstersCatched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersCatched.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 			children = (
 				3A88516929323ED500FA16E8 /* AppDelegate.swift */,
 				3A8851812932408000FA16E8 /* Application */,
+				3A8851DF2936903400FA16E8 /* Model */,
 				3A8851B9293543AF00FA16E8 /* UserFlows */,
 				3A8851C62935636800FA16E8 /* Services */,
 				3A8851C329354BA800FA16E8 /* SupportingViews */,
@@ -107,9 +122,13 @@
 		3A8851A12933C61300FA16E8 /* Monsters3DModels */ = {
 			isa = PBXGroup;
 			children = (
-				3A8851A82933DCBB00FA16E8 /* robot.usdz */,
-				3A8851AD2933FFE400FA16E8 /* drummer.usdz */,
-				3A8851AF293404E300FA16E8 /* warrior.usdz */,
+				3A8851D129368E2000FA16E8 /* broodmother.usdz */,
+				3A8851D429368E2100FA16E8 /* choozie.usdz */,
+				3A8851D629368E2100FA16E8 /* imp.usdz */,
+				3A8851D529368E2100FA16E8 /* knuckle.usdz */,
+				3A8851D229368E2000FA16E8 /* nevery.usdz */,
+				3A8851D729368E2100FA16E8 /* tautau.usdz */,
+				3A8851A82933DCBB00FA16E8 /* robbie.usdz */,
 			);
 			path = Monsters3DModels;
 			sourceTree = "<group>";
@@ -117,6 +136,7 @@
 		3A8851A42933C73300FA16E8 /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				3A8851E22936910400FA16E8 /* MonstersCatched */,
 				3A8851A12933C61300FA16E8 /* Monsters3DModels */,
 				3A8851A52933C74500FA16E8 /* ColorsStorage */,
 			);
@@ -171,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8851C429354BB600FA16E8 /* AlertView.swift */,
+				3A8851CD29366A8A00FA16E8 /* ImageAnnotations.swift */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";
@@ -181,6 +202,22 @@
 				3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3A8851DF2936903400FA16E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851E02936904700FA16E8 /* MonsterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A8851E22936910400FA16E8 /* MonstersCatched */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851E32936916A00FA16E8 /* MonstersCatched.swift */,
+			);
+			path = MonstersCatched;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,14 +278,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8851B0293404E300FA16E8 /* warrior.usdz in Resources */,
-				3A8851A92933DCBB00FA16E8 /* robot.usdz in Resources */,
+				3A8851DE29368E2100FA16E8 /* tautau.usdz in Resources */,
+				3A8851D929368E2100FA16E8 /* nevery.usdz in Resources */,
+				3A8851DB29368E2100FA16E8 /* choozie.usdz in Resources */,
+				3A8851DD29368E2100FA16E8 /* imp.usdz in Resources */,
+				3A8851A92933DCBB00FA16E8 /* robbie.usdz in Resources */,
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
+				3A8851DC29368E2100FA16E8 /* knuckle.usdz in Resources */,
 				3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */,
 				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
+				3A8851D829368E2100FA16E8 /* broodmother.usdz in Resources */,
 				3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */,
 				3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */,
-				3A8851AE2933FFE400FA16E8 /* drummer.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,13 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8851CE29366A8A00FA16E8 /* ImageAnnotations.swift in Sources */,
 				3A88517F2932400E00FA16E8 /* CatchMonsterViewController.swift in Sources */,
 				3A8851A72933C75700FA16E8 /* ColorsStorage.swift in Sources */,
 				3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */,
 				3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */,
 				3A8851C82935637F00FA16E8 /* GenerateRandomAnnotations.swift in Sources */,
+				3A8851E42936916A00FA16E8 /* MonstersCatched.swift in Sources */,
 				3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */,
 				3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */,
+				3A8851E12936904700FA16E8 /* MonsterModel.swift in Sources */,
 				3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

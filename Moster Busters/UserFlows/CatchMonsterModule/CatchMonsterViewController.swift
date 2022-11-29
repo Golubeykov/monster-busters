@@ -21,13 +21,25 @@ final class CatchMonsterViewController: UIViewController {
     // MARK: - Properties
 
     var anchorIsActive: Cancellable!
+    var monster: Monster
+
+    // MARK: - Init
+
+    init(monster: Monster) {
+        self.monster = monster
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAppearance()
-        configure3DModel()
+        configure3DModel(for: monster)
     }
 
     // MARK: - Actions
@@ -56,11 +68,11 @@ private extension CatchMonsterViewController {
         catchButtonLabel.isHidden = true
     }
 
-    func configure3DModel() {
+    func configure3DModel(for monster: Monster) {
         let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [0.3, 0.3])
         arView.scene.addAnchor(anchor)
         var modelIsLoaded: AnyCancellable? = nil
-        modelIsLoaded = ModelEntity.loadModelAsync(named: "robot")
+        modelIsLoaded = ModelEntity.loadModelAsync(named: monster.assetName)
             .collect()
             .sink(receiveCompletion: { error in
                 print("Error:", error)
@@ -76,7 +88,7 @@ private extension CatchMonsterViewController {
                     let boundingRadius = entityBoundingBox.boundingRadius * 2
                     print(boundingRadius)
                     let textMaterial = SimpleMaterial(color: .black, isMetallic: false)
-                    let textEntity = ModelEntity(mesh: .generateText("Robot, 20 lvl", extrusionDepth: 0.1, font: .boldSystemFont(ofSize: 4), containerFrame: .zero, alignment: .left, lineBreakMode: .byWordWrapping), materials: [textMaterial])
+                    let textEntity = ModelEntity(mesh: .generateText("\(monster.name), \(monster.lvl) lvl", extrusionDepth: 0.1, font: .boldSystemFont(ofSize: 4), containerFrame: .zero, alignment: .left, lineBreakMode: .byWordWrapping), materials: [textMaterial])
                     textEntity.setScale(SIMD3<Float>(0.5, 0.5, 0.5), relativeTo: entity)
                     textEntity.position = [-boundingRadius/4, boundingRadius/1.2, -1]
                     anchor.addChild(textEntity)

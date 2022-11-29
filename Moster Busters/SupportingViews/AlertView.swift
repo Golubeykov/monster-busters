@@ -22,4 +22,14 @@ enum AlertView {
         topViewController.present(alert, animated: true, completion: nil)
     }
 
+    static func appendInformingAlertView(textBody: String) {
+        guard let topViewController = UIApplication.getTopViewController() else { return }
+
+        let alert = UIAlertController(title: "Внимание", message: textBody, preferredStyle: UIAlertController.Style.alert)
+        let confirmAction = UIAlertAction(title: "Окей", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(confirmAction)
+
+        topViewController.present(alert, animated: true, completion: nil)
+    }
+
 }

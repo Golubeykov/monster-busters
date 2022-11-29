@@ -72,7 +72,7 @@ final class MapViewController: UIViewController {
     }
     
     @IBAction func myTeamButtonAction(_ sender: Any) {
-       present(CatchMonsterViewController(), animated: true)
+        
     }
 
 }
@@ -85,6 +85,7 @@ private extension MapViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         mapView.showsUserLocation = true
         locationManager.delegate = self
+        mapView.delegate = self
         centerOnUserLocation()
     }
 
@@ -143,6 +144,57 @@ extension MapViewController: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         centerOnUserLocation()
+    }
+
+}
+
+// MARK: - MapView Delegate
+
+extension MapViewController: MKMapViewDelegate {
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil  //Обработка аннотации локации пользователя
+        }
+
+        //Обработка аннотаций без картинок
+        if !annotation.isKind(of: ImageAnnotation.self) {
+            var pinAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "DefaultPinView")
+            if pinAnnotationView == nil {
+                pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "DefaultPinView")
+            }
+            return pinAnnotationView
+        }
+
+        //Обработка аннотаций с картинкой
+        var view: ImageAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: "imageAnnotation") as? ImageAnnotationView
+        if view == nil {
+            view = ImageAnnotationView(annotation: annotation, reuseIdentifier: "imageAnnotation")
+        }
+
+        if let annotation = annotation as? ImageAnnotation {
+            view?.image = annotation.image
+            view?.annotation = annotation
+        }
+        return view
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        guard let userCurrentCoordinate = locationManager.location?.coordinate, annotation.isKind(of: ImageAnnotation.self) else { return }
+        let userCurrentLocation = CLLocation(latitude: userCurrentCoordinate.latitude, longitude: userCurrentCoordinate.longitude)
+
+        let annotationCoordinate = annotation.coordinate
+        let annotationLocation = CLLocation(latitude: annotationCoordinate.latitude, longitude: annotationCoordinate.longitude)
+        let distanceBetween = userCurrentLocation.distance(from: annotationLocation)
+
+        if (distanceBetween <= 70) {
+            AlertView.appendRequiredActionAlertView(textBody: "Перейти к поимке монстра?", textAction: "Да") { [weak self] _ in
+                guard let annotation = annotation as? ImageAnnotation, let monster = annotation.monster else { return }
+                self?.present(CatchMonsterViewController(monster: monster), animated: true)
+            }
+        } else {
+            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко, подойдите ближе")
+        }
     }
 
 }
