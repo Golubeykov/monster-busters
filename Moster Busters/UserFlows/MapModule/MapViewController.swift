@@ -189,6 +189,9 @@ extension MapViewController: MKMapViewDelegate {
             AlertView.appendRequiredActionAlertView(textBody: "Перейти к поимке монстра?", textAction: "Да", confirmCompletion: { [weak self] _ in
                 guard let monster = annotation.monster else { return }
                 let catchMonsterVC = CatchMonsterViewController(monster: monster)
+                catchMonsterVC.monsterWasCatched = { [weak self] in
+                    self?.mapView.removeAnnotation(annotation)
+                }
                 catchMonsterVC.modalPresentationStyle = .fullScreen
                 self?.present(catchMonsterVC, animated: true, completion: nil)
                 self?.mapView.deselectAnnotation(annotation, animated: true)

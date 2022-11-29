@@ -28,10 +28,9 @@ final class CatchMonsterViewController: UIViewController {
     @IBOutlet private weak var arView: ARView!
     @IBOutlet private weak var catchButtonLabel: UIButton!
 
-    // MARK: - Properties
+    // MARK: - Private properties
 
-    var anchorIsActive: Cancellable!
-    var monster: Monster
+    private var anchorIsActive: Cancellable!
     private lazy var actionForCatchButton: () -> Void = { [weak self] in
         guard let `self` = self else { return }
         let catchResult = self.tryToCatch()
@@ -44,6 +43,11 @@ final class CatchMonsterViewController: UIViewController {
             self.showFailureCatchResult()
         }
     }
+
+    // MARK: - Properties
+
+    var monster: Monster
+    var monsterWasCatched: () -> Void = {}
 
     // MARK: - Init
 
@@ -92,6 +96,7 @@ private extension CatchMonsterViewController {
         catchButtonLabel.setTitle("Перейти к картам", for: .normal)
         MonstersCatched.shared.addMonster(monster)
         actionForCatchButton = { [weak self] in
+            self?.monsterWasCatched()
             self?.dismiss(animated: true)
         }
     }
