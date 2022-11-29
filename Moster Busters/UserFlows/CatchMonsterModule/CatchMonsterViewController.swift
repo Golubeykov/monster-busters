@@ -47,7 +47,7 @@ final class CatchMonsterViewController: UIViewController {
     // MARK: - Properties
 
     var monster: Monster
-    var monsterWasCatched: () -> Void = {}
+    var monsterWasCatchedOrRunAway: () -> Void = {}
 
     // MARK: - Init
 
@@ -95,8 +95,8 @@ private extension CatchMonsterViewController {
         catchResultView.isHidden = false
         catchButtonLabel.setTitle("Перейти к картам", for: .normal)
         MonstersCatched.shared.addMonster(monster)
+        monsterWasCatchedOrRunAway()
         actionForCatchButton = { [weak self] in
-            self?.monsterWasCatched()
             self?.dismiss(animated: true)
         }
     }
@@ -112,6 +112,7 @@ private extension CatchMonsterViewController {
         catchResultLabel.text = "Упс :( \nМонстр успел убежать от вас"
         catchResultView.isHidden = false
         catchButtonLabel.setTitle("Перейти к картам", for: .normal)
+        monsterWasCatchedOrRunAway()
         actionForCatchButton = { [weak self] in
             self?.dismiss(animated: true)
         }
