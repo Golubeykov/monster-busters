@@ -60,7 +60,7 @@ private extension CatchMonsterViewController {
         let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [0.3, 0.3])
         arView.scene.addAnchor(anchor)
         var modelIsLoaded: AnyCancellable? = nil
-        modelIsLoaded = ModelEntity.loadModelAsync(named: "warrior")
+        modelIsLoaded = ModelEntity.loadModelAsync(named: "robot")
             .collect()
             .sink(receiveCompletion: { error in
                 print("Error:", error)

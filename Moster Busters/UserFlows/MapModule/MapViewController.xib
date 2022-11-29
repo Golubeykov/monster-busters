@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="Moster_Busters" customModuleProvider="target">
             <connections>
                 <outlet property="mapView" destination="cc2-92-2KI" id="iPd-cl-Gh5"/>
+                <outlet property="myTeamButtonLabel" destination="zBO-3m-DD1" id="T7q-Ek-9yc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,19 +25,79 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <standardMapConfiguration key="preferredConfiguration"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9S-tO-nSF">
+                    <rect key="frame" x="327" y="752" width="51" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="Vcm-cP-tGS"/>
+                        <constraint firstAttribute="width" constant="51" id="aNO-hk-hul"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="centerMap"/>
+                    <connections>
+                        <action selector="centerMapAction:" destination="-1" eventType="touchUpInside" id="uD4-E3-pPr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBO-3m-DD1">
+                    <rect key="frame" x="96.666666666666686" y="752" width="200" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="CPl-5F-B8T"/>
+                        <constraint firstAttribute="width" constant="200" id="r9z-o6-0i6"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="myTeamButtonAction:" destination="-1" eventType="touchUpInside" id="RcA-CQ-mw3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgD-vS-Eg4">
+                    <rect key="frame" x="327" y="336.66666666666669" width="51" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="QGV-t7-t8z"/>
+                        <constraint firstAttribute="height" constant="51" id="mYs-3x-oH7"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="zoomInMap"/>
+                    <connections>
+                        <action selector="zoomInButtonAction:" destination="-1" eventType="touchUpInside" id="Zr1-A4-Jo9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gte-hH-N6x">
+                    <rect key="frame" x="327" y="400.66666666666669" width="51" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="aSp-Jl-MvK"/>
+                        <constraint firstAttribute="height" constant="51" id="q1f-fL-MPx"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="zoomOutMap"/>
+                    <connections>
+                        <action selector="zoomOutButtonAction:" destination="-1" eventType="touchUpInside" id="gCx-rF-qaQ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cc2-92-2KI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4qp-Jo-FLx"/>
                 <constraint firstAttribute="bottom" secondItem="cc2-92-2KI" secondAttribute="bottom" id="65Q-Pz-Mfk"/>
+                <constraint firstItem="zBO-3m-DD1" firstAttribute="centerY" secondItem="I9S-tO-nSF" secondAttribute="centerY" id="7yX-KZ-lDW"/>
                 <constraint firstItem="cc2-92-2KI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Gl-p9-bLb"/>
+                <constraint firstItem="QgD-vS-Eg4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.85" id="HRt-O4-DS4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I9S-tO-nSF" secondAttribute="trailing" constant="15" id="Jdb-1f-YDN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QgD-vS-Eg4" secondAttribute="trailing" constant="15" id="KVh-LH-684"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gte-hH-N6x" secondAttribute="trailing" constant="15" id="Rqc-cl-DHs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I9S-tO-nSF" secondAttribute="bottom" constant="15" id="RzP-mh-xmA"/>
+                <constraint firstItem="gte-hH-N6x" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Sd9-wT-HqA"/>
+                <constraint firstItem="I9S-tO-nSF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zBO-3m-DD1" secondAttribute="trailing" constant="18" id="YsB-2v-U7w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cc2-92-2KI" secondAttribute="trailing" id="Z08-74-8pR"/>
+                <constraint firstItem="zBO-3m-DD1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jDE-0Y-w1o"/>
             </constraints>
             <point key="canvasLocation" x="102" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="centerMap" width="51" height="51"/>
+        <image name="zoomInMap" width="52" height="52"/>
+        <image name="zoomOutMap" width="51" height="51"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

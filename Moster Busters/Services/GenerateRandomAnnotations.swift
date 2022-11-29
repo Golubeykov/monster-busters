@@ -22,8 +22,8 @@ enum GenerateRandomAnnotations {
             //Add Annotation
             let annotation = MKPointAnnotation()
             annotation.coordinate = generateRandomCoordinates(min: 70, max: 150) //this will be the maximum and minimum distance of the annotation from the current Location (Meters)
-            annotation.title = "Annotation Title"
-            annotation.subtitle = "SubTitle"
+            annotation.title = "Monster"
+            annotation.subtitle = "lvl 20"
             mapView.addAnnotation(annotation)
 
         }
