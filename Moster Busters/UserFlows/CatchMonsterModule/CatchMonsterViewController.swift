@@ -11,8 +11,18 @@ import Combine
 
 final class CatchMonsterViewController: UIViewController {
 
+    // MARK: - Catch result cases
+
+    private enum CatchResults {
+        case success
+        case tryAgain
+        case failure
+    }
+
     // MARK: - IBOutlets
 
+    @IBOutlet private weak var catchResultView: UIView!
+    @IBOutlet private weak var catchResultLabel: UILabel!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var searchingForMonsterLabel: UILabel!
     @IBOutlet private weak var arView: ARView!
@@ -22,6 +32,18 @@ final class CatchMonsterViewController: UIViewController {
 
     var anchorIsActive: Cancellable!
     var monster: Monster
+    private lazy var actionForCatchButton: () -> Void = { [weak self] in
+        guard let `self` = self else { return }
+        let catchResult = self.tryToCatch()
+        switch catchResult {
+        case .success:
+            self.showSuccessCatchResult()
+        case .tryAgain:
+            self.showTryAgainCatchResult()
+        case .failure:
+            self.showFailureCatchResult()
+        }
+    }
 
     // MARK: - Init
 
@@ -45,9 +67,12 @@ final class CatchMonsterViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func catchButtonAction(_ sender: Any) {
-
+        actionForCatchButton()
     }
 
+    @IBAction func closeModalViewAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
 
 }
 
@@ -57,6 +82,41 @@ private extension CatchMonsterViewController {
 
     func configureAppearance() {
         configureCatchButton()
+        configureCatchResultView()
+    }
+
+    func showSuccessCatchResult() {
+        catchResultLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        catchResultLabel.text = "Ура! \nВы поймали монстра \(monster.name) (\(monster.lvl) уровня) в свою команду!!"
+        catchResultView.isHidden = false
+        catchButtonLabel.setTitle("Перейти к картам", for: .normal)
+        MonstersCatched.shared.addMonster(monster)
+        actionForCatchButton = { [weak self] in
+            self?.dismiss(animated: true)
+        }
+    }
+
+    func showTryAgainCatchResult() {
+        catchResultLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        catchResultLabel.text = "Увы не вышло:( \nПопробуйте поймать еще раз!"
+        catchResultView.isHidden = false
+    }
+
+    func showFailureCatchResult() {
+        catchResultLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        catchResultLabel.text = "Упс :( \nМонстр успел убежать от вас"
+        catchResultView.isHidden = false
+        catchButtonLabel.setTitle("Перейти к картам", for: .normal)
+        actionForCatchButton = { [weak self] in
+            self?.dismiss(animated: true)
+        }
+    }
+
+    func configureCatchResultView() {
+        catchResultView.backgroundColor = ColorsStorage.purple
+        catchResultView.alpha = 0.7
+        catchResultView.layer.cornerRadius = 10
+        catchResultView.isHidden = true
     }
 
     func configureCatchButton() {
@@ -104,6 +164,18 @@ private extension CatchMonsterViewController {
                 self?.catchButtonLabel.isHidden = false
            }
             self?.anchorIsActive.cancel()
+        }
+    }
+
+    private func tryToCatch() -> CatchResults {
+        let randomInt = Int.random(in: 0..<3)
+        switch randomInt {
+        case 0:
+            return .success
+        case 1:
+            return .tryAgain
+        default:
+            return .failure
         }
     }
 

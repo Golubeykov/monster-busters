@@ -25,10 +25,6 @@ final class MapViewController: UIViewController {
         super.viewDidLoad()
         configureStartButton()
         addObserverToDetectIfAppMovedToForeground()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setupMapView()
         createRandomAnnotations()
     }
@@ -191,7 +187,10 @@ extension MapViewController: MKMapViewDelegate {
         if (distanceBetween <= 70) {
             AlertView.appendRequiredActionAlertView(textBody: "Перейти к поимке монстра?", textAction: "Да", confirmCompletion: { [weak self] _ in
                 guard let monster = annotation.monster else { return }
-                self?.present(CatchMonsterViewController(monster: monster), animated: true)
+                let catchMonsterVC = CatchMonsterViewController(monster: monster)
+                catchMonsterVC.modalPresentationStyle = .fullScreen
+                self?.present(catchMonsterVC, animated: true, completion: nil)
+                self?.mapView.deselectAnnotation(annotation, animated: true)
             }) { [weak self] _ in
                 self?.mapView.deselectAnnotation(annotation, animated: true)
             }

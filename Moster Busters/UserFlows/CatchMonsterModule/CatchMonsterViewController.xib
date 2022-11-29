@@ -13,6 +13,8 @@
                 <outlet property="activityIndicator" destination="xb8-Kx-r94" id="7Ts-aC-xeU"/>
                 <outlet property="arView" destination="gUz-Aq-1Pr" id="2ET-Sx-y0y"/>
                 <outlet property="catchButtonLabel" destination="cjL-tV-ata" id="qbg-G8-SS4"/>
+                <outlet property="catchResultLabel" destination="pcg-zJ-tsC" id="Urv-PM-Gxd"/>
+                <outlet property="catchResultView" destination="Vev-FH-0MO" id="VyS-Vl-JOK"/>
                 <outlet property="searchingForMonsterLabel" destination="tCI-3P-QZc" id="79V-j5-I8t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,6 +47,38 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-FH-0MO">
+                    <rect key="frame" x="70" y="209" width="253" height="50.333333333333314"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcg-zJ-tsC">
+                            <rect key="frame" x="15" y="14.999999999999998" width="223" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pcg-zJ-tsC" secondAttribute="bottom" constant="15" id="N51-GK-mPV"/>
+                        <constraint firstItem="pcg-zJ-tsC" firstAttribute="top" secondItem="Vev-FH-0MO" secondAttribute="top" constant="15" id="iFi-g5-qPv"/>
+                        <constraint firstAttribute="trailing" secondItem="pcg-zJ-tsC" secondAttribute="trailing" constant="15" id="lpb-dA-xhQ"/>
+                        <constraint firstItem="pcg-zJ-tsC" firstAttribute="leading" secondItem="Vev-FH-0MO" secondAttribute="leading" constant="15" id="xpy-hu-hbe"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-l6-t5i">
+                    <rect key="frame" x="348" y="59" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="Qo1-xz-hwL"/>
+                        <constraint firstAttribute="height" constant="45" id="oCf-Bg-ulS"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="closeModalViewAction:" destination="-1" eventType="touchUpInside" id="khr-fS-rP1"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,14 +92,20 @@
                 <constraint firstItem="gUz-Aq-1Pr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qq2-we-yrG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gUz-Aq-1Pr" secondAttribute="trailing" id="SJ8-ju-676"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tCI-3P-QZc" secondAttribute="trailing" constant="100" id="Xub-n2-He7"/>
+                <constraint firstItem="CV6-l6-t5i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Z3a-z7-EG3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vev-FH-0MO" secondAttribute="trailing" constant="70" id="ePs-eh-jlj"/>
                 <constraint firstItem="xb8-Kx-r94" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="ewv-xt-goH"/>
                 <constraint firstAttribute="bottom" secondItem="gUz-Aq-1Pr" secondAttribute="bottom" id="iNO-Qm-6BN"/>
+                <constraint firstItem="Vev-FH-0MO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="jfi-65-K5O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CV6-l6-t5i" secondAttribute="trailing" id="s5s-oL-TMh"/>
                 <constraint firstItem="tCI-3P-QZc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="ssn-UM-1Mj"/>
+                <constraint firstItem="Vev-FH-0MO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="tWs-6B-cTk"/>
             </constraints>
-            <point key="canvasLocation" x="48" y="21"/>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

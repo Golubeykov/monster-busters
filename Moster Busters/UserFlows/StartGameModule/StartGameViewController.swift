@@ -81,8 +81,9 @@ private extension StartGameViewController {
 
     func initGame() {
         if let delegate = UIApplication.shared.delegate as? AppDelegate {
-            let MapViewController = MapViewController()
-            delegate.window?.rootViewController = MapViewController
+            let mapViewController = MapViewController()
+            let navigationController = UINavigationController(rootViewController: mapViewController)
+            delegate.window?.rootViewController = navigationController
         }
     }
 

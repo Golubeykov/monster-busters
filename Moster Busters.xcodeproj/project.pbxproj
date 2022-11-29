@@ -30,6 +30,8 @@
 		3A8851DE29368E2100FA16E8 /* tautau.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D729368E2100FA16E8 /* tautau.usdz */; };
 		3A8851E12936904700FA16E8 /* MonsterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E02936904700FA16E8 /* MonsterModel.swift */; };
 		3A8851E42936916A00FA16E8 /* MonstersCatched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E32936916A00FA16E8 /* MonstersCatched.swift */; };
+		3A8851E82936A3A800FA16E8 /* MyTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E62936A3A800FA16E8 /* MyTeamViewController.swift */; };
+		3A8851E92936A3A800FA16E8 /* MyTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851E72936A3A800FA16E8 /* MyTeamViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		3A8851D729368E2100FA16E8 /* tautau.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tautau.usdz; sourceTree = "<group>"; };
 		3A8851E02936904700FA16E8 /* MonsterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterModel.swift; sourceTree = "<group>"; };
 		3A8851E32936916A00FA16E8 /* MonstersCatched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersCatched.swift; sourceTree = "<group>"; };
+		3A8851E62936A3A800FA16E8 /* MyTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamViewController.swift; sourceTree = "<group>"; };
+		3A8851E72936A3A800FA16E8 /* MyTeamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTeamViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 		3A8851B9293543AF00FA16E8 /* UserFlows */ = {
 			isa = PBXGroup;
 			children = (
+				3A8851E52936A39100FA16E8 /* MyTeamModule */,
 				3A8851BE2935477B00FA16E8 /* StartGameModule */,
 				3A8851B8293543A300FA16E8 /* MapModule */,
 				3A88517C29323FF000FA16E8 /* CatchMonsterModule */,
@@ -218,6 +223,15 @@
 				3A8851E32936916A00FA16E8 /* MonstersCatched.swift */,
 			);
 			path = MonstersCatched;
+			sourceTree = "<group>";
+		};
+		3A8851E52936A39100FA16E8 /* MyTeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A8851E62936A3A800FA16E8 /* MyTeamViewController.swift */,
+				3A8851E72936A3A800FA16E8 /* MyTeamViewController.xib */,
+			);
+			path = MyTeamModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +300,7 @@
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
 				3A8851DC29368E2100FA16E8 /* knuckle.usdz in Resources */,
 				3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */,
+				3A8851E92936A3A800FA16E8 /* MyTeamViewController.xib in Resources */,
 				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
 				3A8851D829368E2100FA16E8 /* broodmother.usdz in Resources */,
 				3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */,
@@ -309,6 +324,7 @@
 				3A8851E42936916A00FA16E8 /* MonstersCatched.swift in Sources */,
 				3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */,
 				3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */,
+				3A8851E82936A3A800FA16E8 /* MyTeamViewController.swift in Sources */,
 				3A8851E12936904700FA16E8 /* MonsterModel.swift in Sources */,
 				3A8851C12935479400FA16E8 /* StartGameViewController.swift in Sources */,
 			);
