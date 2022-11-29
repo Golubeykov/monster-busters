@@ -13,6 +13,7 @@ class ColorsStorage {
     static let white = UIColor(rgb: 0xFFFFFF)
     static let black = UIColor(rgb: 0x000000)
     static let purple = UIColor(rgb: 0x3C0457)
+    static let pink = UIColor(rgb: 0xFFA7FE)
 }
 
 extension UIColor {

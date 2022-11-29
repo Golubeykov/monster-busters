@@ -68,7 +68,8 @@ final class MapViewController: UIViewController {
     }
     
     @IBAction func myTeamButtonAction(_ sender: Any) {
-        
+        let monstersCatchedViewController = MonstersCatchedViewController()
+        navigationController?.pushViewController(monstersCatchedViewController, animated: true)
     }
 
 }
