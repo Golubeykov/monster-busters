@@ -7,7 +7,13 @@
 
 import UIKit
 
-final class MonstersCatchedViewController: UIViewController {
+final class MonstersCatchedViewController: UIViewController, UIGestureRecognizerDelegate {
+
+    // MARK: - Constants
+
+    private enum Constants {
+        static let arrowImageForNavigationBar = UIImage(named: "backArrowForNavigation") ?? UIImage()
+    }
 
     // MARK: - IBOutlets
 
@@ -16,9 +22,7 @@ final class MonstersCatchedViewController: UIViewController {
     // MARK: - Properties
 
     var monstersCathed: [Monster] {
-        //MonstersCatched.shared.getCatchedMonstersList()
-        var monster = Monster(name: "Robbie", assetName: "robbie")
-        return [monster, monster]
+        MonstersCatched.shared.getCatchedMonstersList()
     }
     let monsterCellIdentifier = "\(MonsterCell.self)"
 
@@ -26,7 +30,7 @@ final class MonstersCatchedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        configureAppearance()
     }
 
 }
@@ -35,9 +39,27 @@ final class MonstersCatchedViewController: UIViewController {
 
 private extension MonstersCatchedViewController {
 
+    func configureAppearance() {
+        configureTableView()
+        configureNavigationBar()
+    }
+
     func configureTableView() {
         tableView.register(UINib(nibName: monsterCellIdentifier, bundle: .main), forCellReuseIdentifier: monsterCellIdentifier)
         tableView.dataSource = self
+        tableView.allowsSelection = false
+    }
+
+    func configureNavigationBar() {
+        navigationItem.title = "Пойманные монстры"
+        let backButton = UIBarButtonItem(image: Constants.arrowImageForNavigationBar,
+                                         style: .plain,
+                                         target: navigationController,
+                                         action: #selector(UINavigationController.popViewController(animated:)))
+        navigationItem.leftBarButtonItem = backButton
+        navigationItem.leftBarButtonItem?.tintColor = ColorsStorage.white
+        navigationController?.navigationBar.backgroundColor = ColorsStorage.clear
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
 
 }
