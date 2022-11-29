@@ -71,12 +71,12 @@ private extension StartGameViewController {
     }
 
     func showAlertForTurningOnLocation() {
-        AlertView.appendRequiredActionAlertView(textBody: "Ваше местоположение нужно для отображения ближайших монстров на карте", textAction: "Перейти в настройки", completion: { _ in
+        AlertView.appendRequiredActionAlertView(textBody: "Ваше местоположение нужно для отображения ближайших монстров на карте", textAction: "Перейти в настройки", confirmCompletion: { _ in
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
             if UIApplication.shared.canOpenURL(settingsUrl) {
                 UIApplication.shared.open(settingsUrl, completionHandler: nil)
             }
-        })
+        }, cancelCompletion: { _ in })
     }
 
     func initGame() {

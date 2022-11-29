@@ -180,7 +180,8 @@ extension MapViewController: MKMapViewDelegate {
     }
 
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
-        guard let userCurrentCoordinate = locationManager.location?.coordinate, annotation.isKind(of: ImageAnnotation.self) else { return }
+        guard let userCurrentCoordinate = locationManager.location?.coordinate, let annotation = annotation as? ImageAnnotation else { return }
+
         let userCurrentLocation = CLLocation(latitude: userCurrentCoordinate.latitude, longitude: userCurrentCoordinate.longitude)
 
         let annotationCoordinate = annotation.coordinate
@@ -188,13 +189,31 @@ extension MapViewController: MKMapViewDelegate {
         let distanceBetween = userCurrentLocation.distance(from: annotationLocation)
 
         if (distanceBetween <= 70) {
-            AlertView.appendRequiredActionAlertView(textBody: "Перейти к поимке монстра?", textAction: "Да") { [weak self] _ in
-                guard let annotation = annotation as? ImageAnnotation, let monster = annotation.monster else { return }
+            AlertView.appendRequiredActionAlertView(textBody: "Перейти к поимке монстра?", textAction: "Да", confirmCompletion: { [weak self] _ in
+                guard let monster = annotation.monster else { return }
                 self?.present(CatchMonsterViewController(monster: monster), animated: true)
+            }) { [weak self] _ in
+                self?.mapView.deselectAnnotation(annotation, animated: true)
             }
         } else {
-            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко, подойдите ближе")
+            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко, подойдите ближе") { [weak self] _ in
+                self?.mapView.deselectAnnotation(annotation, animated: true)
+            }
         }
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotationView = view as? ImageAnnotationView else { return }
+        UIView.animate(withDuration: 0.3, delay: 0, animations: {
+            annotationView.transform = CGAffineTransform(scaleX: 2, y: 2)
+        })
+    }
+
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        guard let annotationView = view as? ImageAnnotationView else { return }
+        UIView.animate(withDuration: 0.3, delay: 0, animations: {
+            annotationView.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
     }
 
 }
