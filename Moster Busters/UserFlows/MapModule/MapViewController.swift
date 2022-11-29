@@ -199,7 +199,7 @@ extension MapViewController: MKMapViewDelegate {
                 self?.mapView.deselectAnnotation(annotation, animated: true)
             }
         } else {
-            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко, подойдите ближе") { [weak self] _ in
+            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко (\(Int(distanceBetween)) м), подойдите на расстояние менее 70 м") { [weak self] _ in
                 self?.mapView.deselectAnnotation(annotation, animated: true)
             }
         }

@@ -13,7 +13,7 @@ struct Monster {
     let name: String
     let assetName: String
     var image: UIImage { UIImage(named: assetName) ?? UIImage() }
-    let lvl: Int = Int.random(in: 1...20)
+    let lvl: Int = Int.random(in: 5...20)
 
 }
 
