@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,6 +14,8 @@
             <connections>
                 <outlet property="mapView" destination="cc2-92-2KI" id="iPd-cl-Gh5"/>
                 <outlet property="myTeamButtonLabel" destination="zBO-3m-DD1" id="T7q-Ek-9yc"/>
+                <outlet property="timerCounterLabel" destination="F1g-67-XOH" id="XG6-8F-V2n"/>
+                <outlet property="timerTextLabel" destination="yck-E8-egU" id="OOj-rC-LhD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -73,10 +76,24 @@
                         <action selector="zoomOutButtonAction:" destination="-1" eventType="touchUpInside" id="gCx-rF-qaQ"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="До обновления карты монстров:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yck-E8-egU">
+                    <rect key="frame" x="85" y="74" width="134" height="40.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5m00s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1g-67-XOH">
+                    <rect key="frame" x="233.99999999999997" y="84" width="53.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="F1g-67-XOH" firstAttribute="leading" secondItem="yck-E8-egU" secondAttribute="trailing" constant="15" id="1YE-sv-FzD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F1g-67-XOH" secondAttribute="trailing" constant="15" id="32L-z6-tpR"/>
                 <constraint firstItem="cc2-92-2KI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4qp-Jo-FLx"/>
                 <constraint firstAttribute="bottom" secondItem="cc2-92-2KI" secondAttribute="bottom" id="65Q-Pz-Mfk"/>
                 <constraint firstItem="zBO-3m-DD1" firstAttribute="centerY" secondItem="I9S-tO-nSF" secondAttribute="centerY" id="7yX-KZ-lDW"/>
@@ -84,14 +101,18 @@
                 <constraint firstItem="QgD-vS-Eg4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.85" id="HRt-O4-DS4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I9S-tO-nSF" secondAttribute="trailing" constant="15" id="Jdb-1f-YDN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QgD-vS-Eg4" secondAttribute="trailing" constant="15" id="KVh-LH-684"/>
+                <constraint firstItem="F1g-67-XOH" firstAttribute="centerY" secondItem="yck-E8-egU" secondAttribute="centerY" id="QJp-1c-AMM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gte-hH-N6x" secondAttribute="trailing" constant="15" id="Rqc-cl-DHs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I9S-tO-nSF" secondAttribute="bottom" constant="15" id="RzP-mh-xmA"/>
                 <constraint firstItem="gte-hH-N6x" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Sd9-wT-HqA"/>
+                <constraint firstItem="zBO-3m-DD1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yck-E8-egU" secondAttribute="bottom" constant="500" id="Wge-Ty-rR1"/>
                 <constraint firstItem="I9S-tO-nSF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zBO-3m-DD1" secondAttribute="trailing" constant="18" id="YsB-2v-U7w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cc2-92-2KI" secondAttribute="trailing" id="Z08-74-8pR"/>
+                <constraint firstItem="yck-E8-egU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="85" id="btn-vN-XLL"/>
+                <constraint firstItem="yck-E8-egU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="g5G-xz-9Qd"/>
                 <constraint firstItem="zBO-3m-DD1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jDE-0Y-w1o"/>
             </constraints>
-            <point key="canvasLocation" x="102" y="20"/>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

@@ -14,19 +14,30 @@ final class MapViewController: UIViewController {
 
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var myTeamButtonLabel: UIButton!
+    @IBOutlet private weak var timerCounterLabel: UILabel!
+    @IBOutlet private weak var timerTextLabel: UILabel!
+
     // MARK: - Properties
 
+    var monsters: [Monster] = MonstersDataBase.returnTenRandomMonstersFromBase()
     let notificationCenter = NotificationCenter.default
     let locationManager = CLLocationManager()
+    var timer: Timer?
+    var currentTime: Int = 5
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureStartButton()
+        configureAppearance()
         addObserverToDetectIfAppMovedToForeground()
         setupMapView()
-        createRandomAnnotations()
+        createAnnotationsForMonsters(monsters)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        timer == nil ? setupTimer() : ()
     }
 
     // MARK: - IBActions
@@ -86,12 +97,6 @@ private extension MapViewController {
         centerOnUserLocation()
     }
 
-    func createRandomAnnotations() {
-        if let location = locationManager.location {
-            GenerateRandomAnnotations.generateAnnoLoc(for: mapView, currentLocation: location)
-        }
-    }
-
     func centerOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
@@ -125,12 +130,24 @@ private extension MapViewController {
         }
     }
 
+    func configureAppearance() {
+        configureStartButton()
+        configureLabels()
+    }
+
     func configureStartButton() {
         myTeamButtonLabel.backgroundColor = ColorsStorage.purple
         myTeamButtonLabel.setTitle("Моя команда", for: .normal)
         myTeamButtonLabel.titleLabel?.font = .systemFont(ofSize: 23, weight: .semibold)
         myTeamButtonLabel.tintColor = ColorsStorage.white
         myTeamButtonLabel.layer.cornerRadius = 10
+    }
+
+    func configureLabels() {
+        timerCounterLabel.font = .systemFont(ofSize: 23, weight: .semibold)
+        timerCounterLabel.textColor = ColorsStorage.white
+        timerTextLabel.font = .systemFont(ofSize: 23, weight: .semibold)
+        timerTextLabel.textColor = ColorsStorage.white
     }
 
 }
@@ -190,7 +207,10 @@ extension MapViewController: MKMapViewDelegate {
                 guard let monster = annotation.monster else { return }
                 let catchMonsterVC = CatchMonsterViewController(monster: monster)
                 catchMonsterVC.monsterWasCatchedOrRunAway = { [weak self] in
+                    guard let monsterToRemove = annotation.monster else { return }
                     self?.mapView.removeAnnotation(annotation)
+                    self?.removeMonster(monsterToRemove)
+                    self?.checkIfMonstersMapIsEmpty()
                 }
                 catchMonsterVC.modalPresentationStyle = .fullScreen
                 self?.present(catchMonsterVC, animated: true, completion: nil)
@@ -217,6 +237,106 @@ extension MapViewController: MKMapViewDelegate {
         UIView.animate(withDuration: 0.3, delay: 0, animations: {
             annotationView.transform = CGAffineTransform(scaleX: 1, y: 1)
         })
+    }
+
+}
+
+// MARK: - Timer logic
+
+private extension MapViewController {
+
+    func setupTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(updateTimer),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+
+    func returnTimeForLabelFromTimer(_ timerTime: Int) -> String {
+        let minutes = timerTime / 60
+        let seconds = timerTime % 60
+        return "\(minutes)m\(seconds)s"
+    }
+
+    func updateLabelWithTimer() {
+        timerCounterLabel.text = returnTimeForLabelFromTimer(currentTime)
+    }
+
+    @objc func updateTimer() {
+        currentTime > 0 ? currentTime -= 1 : resetCurrentTimeAndUpdateMosterMap()
+        updateLabelWithTimer()
+    }
+
+    func resetCurrentTimeAndUpdateMosterMap() {
+        updateMonsterMap()
+        currentTime = 300
+    }
+
+}
+
+// MARK: - Update monster map logic
+
+private extension MapViewController {
+
+    func updateMonsterMap() {
+        removeMonstersRandomly()
+        let newMonsters = MonstersDataBase.returnSixRandomMonstersFromBase()
+        createAnnotationsForMonsters(newMonsters)
+        monsters += newMonsters
+    }
+
+    func generateRandomInt() -> Int {
+        return Int.random(in: 1...5)
+    }
+
+    // с вероятностью 20% каждый монстр будет удален с карты
+    func removeMonstersRandomly() {
+        for _ in 0..<monsters.count {
+            if generateRandomInt() == 1 {
+                let indexToRemove = Int.random(in: 0..<monsters.count)
+                removeAnnotationWithParticularMonster(monsters[indexToRemove])
+                monsters.remove(at: indexToRemove)
+            }
+        }
+    }
+
+    func createAnnotationsForMonsters(_ monsters: [Monster]) {
+        guard let location = locationManager.location else { return }
+        for index in monsters.indices {
+            let monster = monsters[index]
+            let annotation = ImageAnnotation()
+            annotation.coordinate = RandomCoordinatesGenerator.generate(min: 30, max: 200, currentLocation: location)
+            annotation.image = UIImage(named: monster.assetName)
+            annotation.title = monster.name
+            annotation.subtitle = "\(monster.lvl) lvl"
+            annotation.monster = monster
+            DispatchQueue.main.async {
+                self.mapView.addAnnotation(annotation)
+            }
+        }
+    }
+
+    func removeMonster(_ monsterToRemove: Monster) {
+        for index in monsters.indices {
+            if monsters[index].id == monsterToRemove.id {
+                monsters.remove(at: index)
+                break
+            }
+        }
+    }
+
+    func removeAnnotationWithParticularMonster(_ monster: Monster) {
+        for annotation in mapView.annotations {
+            guard let imageAnnotation = annotation as? ImageAnnotation,
+                    let annotationMonster = imageAnnotation.monster,
+                    monster.id == annotationMonster.id else { continue }
+            mapView.removeAnnotation(imageAnnotation)
+        }
+    }
+
+    func checkIfMonstersMapIsEmpty() {
+        monsters.isEmpty ? monsters = MonstersDataBase.returnTenRandomMonstersFromBase() : ()
     }
 
 }

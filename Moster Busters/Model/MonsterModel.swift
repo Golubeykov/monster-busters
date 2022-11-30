@@ -29,11 +29,32 @@ enum MonstersDataBase {
         Monster(name: "Nevery", assetName: "nevery")
     ]
 
-    static func returnFiveRandomMonstersFromBase() -> [Monster] {
-        let mostersShuffled: [Monster] = self.allMonsters.shuffled()
+    static func returnSixRandomMonstersFromBase() -> [Monster] {
+        var monstersToShuffle: [Monster] = []
+        for monster in allMonsters {
+            let newMonster = Monster(name: monster.name, assetName: monster.assetName) //создаем нового монстра для уникального UUID
+            monstersToShuffle.append(newMonster)
+        }
+        let mostersShuffled: [Monster] = monstersToShuffle.shuffled()
         var monstersToReturn: [Monster] = []
-        for index in 0..<5 {
+        for index in 0...5 {
             monstersToReturn.append(mostersShuffled[index])
+        }
+        return monstersToReturn
+    }
+
+    static func returnTenRandomMonstersFromBase() -> [Monster] {
+        func returnRandomIndex() -> Int {
+            let randomIndex = Int.random(in: 0..<allMonsters.count)
+            return randomIndex
+        }
+        var monstersToReturn: [Monster] = []
+        for _ in 0..<20 {
+            let randomIndex = returnRandomIndex()
+            let monsterName = allMonsters[randomIndex].name
+            let monsterAssetName = allMonsters[randomIndex].assetName //создаем нового монстра для уникального UUID
+            let monster = Monster(name: monsterName, assetName: monsterAssetName)
+            monstersToReturn.append(monster)
         }
         return monstersToReturn
     }
