@@ -18,6 +18,7 @@ final class MonstersCatchedViewController: UIViewController, UIGestureRecognizer
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var zeroScreenLabel: UILabel!
 
     // MARK: - Properties
 
@@ -42,6 +43,14 @@ private extension MonstersCatchedViewController {
     func configureAppearance() {
         configureTableView()
         configureNavigationBar()
+        configureZeroScreenLabel()
+    }
+
+    func configureZeroScreenLabel() {
+        zeroScreenLabel.font = .systemFont(ofSize: 23, weight: .semibold)
+        zeroScreenLabel.textColor = ColorsStorage.white
+        zeroScreenLabel.text = "Вы ещё не поймали монстров :("
+        zeroScreenLabel.isHidden = monstersCathed.isEmpty ? false : true
     }
 
     func configureTableView() {
