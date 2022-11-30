@@ -115,8 +115,9 @@ private extension MapViewController {
 
     func checkLocationServices() {
         DispatchQueue.global().async {
-            if (CLLocationManager.authorizationStatus() != .authorizedAlways) || (CLLocationManager.authorizationStatus() != .authorizedWhenInUse) {
+            guard (CLLocationManager.authorizationStatus() == .authorizedAlways) || (CLLocationManager.authorizationStatus() == .authorizedWhenInUse) else {
                 self.sendUserToStartGameFlow()
+                return
             }
         }
     }
