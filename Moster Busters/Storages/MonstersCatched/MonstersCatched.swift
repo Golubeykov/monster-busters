@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MonstersCatched {
+final class MonstersCatched {
 
     static let shared = MonstersCatched()
     private var monstersCatched: [Monster] = []

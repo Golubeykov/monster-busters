@@ -34,6 +34,7 @@
 		3A8851F22936A79300FA16E8 /* MonstersCatchedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851F02936A79300FA16E8 /* MonstersCatchedViewController.xib */; };
 		3A8851F62936A8B700FA16E8 /* MonsterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851F42936A8B700FA16E8 /* MonsterCell.swift */; };
 		3A8851F72936A8B700FA16E8 /* MonsterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851F52936A8B700FA16E8 /* MonsterCell.xib */; };
+		3A9619872937FEDB003A8961 /* MonstersDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9619862937FEDB003A8961 /* MonstersDataBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		3A8851F02936A79300FA16E8 /* MonstersCatchedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonstersCatchedViewController.xib; sourceTree = "<group>"; };
 		3A8851F42936A8B700FA16E8 /* MonsterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterCell.swift; sourceTree = "<group>"; };
 		3A8851F52936A8B700FA16E8 /* MonsterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterCell.xib; sourceTree = "<group>"; };
+		3A9619862937FEDB003A8961 /* MonstersDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersDataBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8851E02936904700FA16E8 /* MonsterModel.swift */,
+				3A9619862937FEDB003A8961 /* MonstersDataBase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */,
 				3A8851C82935637F00FA16E8 /* GenerateRandomAnnotations.swift in Sources */,
 				3A8851E42936916A00FA16E8 /* MonstersCatched.swift in Sources */,
+				3A9619872937FEDB003A8961 /* MonstersDataBase.swift in Sources */,
 				3A8851BC293543DE00FA16E8 /* MapViewController.swift in Sources */,
 				3A8851F12936A79300FA16E8 /* MonstersCatchedViewController.swift in Sources */,
 				3A8851AC2933EC2500FA16E8 /* GetTopViewController.swift in Sources */,

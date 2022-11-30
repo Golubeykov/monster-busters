@@ -23,7 +23,7 @@ final class MapViewController: UIViewController {
     let notificationCenter = NotificationCenter.default
     let locationManager = CLLocationManager()
     var timer: Timer?
-    var currentTime: Int = 5
+    var currentTime: Int = 300
 
     // MARK: - Lifecycle
 
@@ -52,7 +52,7 @@ final class MapViewController: UIViewController {
 
     @IBAction func zoomOutButtonAction(_ sender: Any) {
         let zoom = getZoom()
-        if zoom > 3.5{
+        if zoom > 3.5 {
             let region = MKCoordinateRegion(center: self.mapView.region.center,
                                             span: MKCoordinateSpan(latitudeDelta: mapView.region.span.latitudeDelta / 0.7,
                                                                    longitudeDelta: mapView.region.span.longitudeDelta / 0.7))

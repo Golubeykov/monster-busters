@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MonsterCell: UITableViewCell {
+final class MonsterCell: UITableViewCell {
 
     // MARK: - IBOutlets
 

@@ -8,6 +8,7 @@
 import MapKit
 
 class ImageAnnotation : NSObject, MKAnnotation {
+
     var coordinate: CLLocationCoordinate2D
     var title: String?
     var subtitle: String?
@@ -23,9 +24,11 @@ class ImageAnnotation : NSObject, MKAnnotation {
         self.colour = UIColor.white
         self.monster = nil
     }
+
 }
 
 class ImageAnnotationView: MKAnnotationView {
+
     private var imageView: UIImageView!
 
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
@@ -52,4 +55,5 @@ class ImageAnnotationView: MKAnnotationView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

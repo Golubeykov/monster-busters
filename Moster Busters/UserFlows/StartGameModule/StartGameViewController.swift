@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class StartGameViewController: UIViewController {
+final class StartGameViewController: UIViewController {
 
     // MARK: - IBOutlets
 

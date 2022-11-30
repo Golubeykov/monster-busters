@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ColorsStorage {
+final class ColorsStorage {
+
     static let backgroundBlue: UIColor = UIColor(rgb: 0x6EE8FB)
     static let clear = UIColor.clear
     static let white = UIColor(rgb: 0xFFFFFF)
@@ -17,6 +18,7 @@ class ColorsStorage {
 }
 
 extension UIColor {
+
    convenience init(red: Int, green: Int, blue: Int) {
        assert(red >= 0 && red <= 255, "Invalid red component")
        assert(green >= 0 && green <= 255, "Invalid green component")
@@ -32,4 +34,5 @@ extension UIColor {
            blue: rgb & 0xFF
        )
    }
+
 }
