@@ -157,13 +157,19 @@ private extension CatchMonsterViewController {
                         let animation = entity.availableAnimations[0]
                         entity.playAnimation(animation.repeat(duration: .infinity))
                     }
-                    let entityBoundingBox = entity.visualBounds(relativeTo: anchor)
-                    let boundingRadius = entityBoundingBox.boundingRadius * 2
-                    print(boundingRadius)
+                    let entityBoundingBox = entity.visualBounds(relativeTo: nil)
+                    let topYCoordinate = entityBoundingBox.extents.y
+                    let minXCoordinate = entityBoundingBox.min.x
                     let textMaterial = SimpleMaterial(color: .black, isMetallic: false)
                     let textEntity = ModelEntity(mesh: .generateText("\(monster.name), \(monster.lvl) lvl", extrusionDepth: 0.1, font: .boldSystemFont(ofSize: 4), containerFrame: .zero, alignment: .left, lineBreakMode: .byWordWrapping), materials: [textMaterial])
                     textEntity.setScale(SIMD3<Float>(0.5, 0.5, 0.5), relativeTo: entity)
-                    textEntity.position = [-boundingRadius/4, boundingRadius/1.2, -1]
+                    if monster.name == "Knuckle" || monster.name == "Nevery" {
+                        textEntity.position = [minXCoordinate/1.5, topYCoordinate * 4, -1]
+                    } else if monster.name == "Choozie" {
+                        textEntity.position = [minXCoordinate/2, topYCoordinate / 1.5, -1]
+                    } else {
+                        textEntity.position = [minXCoordinate/1.5, topYCoordinate, -1]
+                    }
                     anchor.addChild(textEntity)
 
                     self?.stopAnimationAsMonsterWasCatched = {
