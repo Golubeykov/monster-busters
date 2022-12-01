@@ -48,6 +48,8 @@ final class CatchMonsterViewController: UIViewController {
 
     var monster: Monster
     var monsterWasCatchedOrRunAway: () -> Void = {}
+    var stopAnimationAsMonsterWasCatched: () -> Void = {}
+    var hideMonsterAsItRanAway: () -> Void = {}
 
     // MARK: - Init
 
@@ -95,6 +97,7 @@ private extension CatchMonsterViewController {
         catchResultView.isHidden = false
         catchButtonLabel.setTitle("Перейти к картам", for: .normal)
         MonstersCatched.shared.addMonster(monster)
+        stopAnimationAsMonsterWasCatched()
         monsterWasCatchedOrRunAway()
         actionForCatchButton = { [weak self] in
             self?.dismiss(animated: true)
@@ -112,6 +115,7 @@ private extension CatchMonsterViewController {
         catchResultLabel.text = "Упс :( \nМонстр успел убежать от вас"
         catchResultView.isHidden = false
         catchButtonLabel.setTitle("Перейти к картам", for: .normal)
+        hideMonsterAsItRanAway()
         monsterWasCatchedOrRunAway()
         actionForCatchButton = { [weak self] in
             self?.dismiss(animated: true)
@@ -143,13 +147,14 @@ private extension CatchMonsterViewController {
             .sink(receiveCompletion: { error in
                 print("Error:", error)
                 modelIsLoaded?.cancel()
-            }, receiveValue: { entities in
+            }, receiveValue: { [weak self] entities in
                 for entity in entities {
                     entity.setScale(SIMD3<Float>(0.05, 0.05, 0.05), relativeTo: anchor)
                     entity.generateCollisionShapes(recursive: true)
                     entity.position = [0, 0, -1]
                     anchor.addChild(entity)
-
+                    let animation = entity.availableAnimations[0]
+                    entity.playAnimation(animation.repeat(duration: .infinity))
                     let entityBoundingBox = entity.visualBounds(relativeTo: anchor)
                     let boundingRadius = entityBoundingBox.boundingRadius * 2
                     print(boundingRadius)
@@ -159,6 +164,13 @@ private extension CatchMonsterViewController {
                     textEntity.position = [-boundingRadius/4, boundingRadius/1.2, -1]
                     anchor.addChild(textEntity)
 
+                    self?.stopAnimationAsMonsterWasCatched = {
+                        entity.stopAllAnimations()
+                    }
+                    self?.hideMonsterAsItRanAway = {
+                        entity.removeFromParent()
+                        textEntity.removeFromParent()
+                    }
                 }
                 modelIsLoaded?.cancel()
             })

@@ -14,7 +14,7 @@ enum MonstersDataBase {
         Monster(name: "Broodmother", assetName: "broodmother"),
         Monster(name: "Imp", assetName: "imp"),
         Monster(name: "Choozie", assetName: "choozie"),
-        Monster(name: "Knuckle", assetName: "nuckle"),
+        Monster(name: "Knuckle", assetName: "knuckle"),
         Monster(name: "Tautau", assetName: "tautau"),
         Monster(name: "Nevery", assetName: "nevery")
     ]
