@@ -203,7 +203,7 @@ extension MapViewController: MKMapViewDelegate {
         let annotationLocation = CLLocation(latitude: annotationCoordinate.latitude, longitude: annotationCoordinate.longitude)
         let distanceBetween = userCurrentLocation.distance(from: annotationLocation)
 
-        if (distanceBetween <= 70) {
+        if (distanceBetween <= 100) {
             AlertView.appendRequiredActionAlertView(textBody: "Перейти к поимке монстра?", textAction: "Да", confirmCompletion: { [weak self] _ in
                 guard let monster = annotation.monster else { return }
                 let catchMonsterVC = CatchMonsterViewController(monster: monster)
@@ -220,7 +220,7 @@ extension MapViewController: MKMapViewDelegate {
                 self?.mapView.deselectAnnotation(annotation, animated: true)
             }
         } else {
-            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко (\(Int(distanceBetween)) м), подойдите на расстояние менее 70 м") { [weak self] _ in
+            AlertView.appendInformingAlertView(textBody: "Монстр слишком далеко (\(Int(distanceBetween)) м), подойдите на расстояние менее 100 м") { [weak self] _ in
                 self?.mapView.deselectAnnotation(annotation, animated: true)
             }
         }
@@ -307,7 +307,7 @@ private extension MapViewController {
         for index in monsters.indices {
             let monster = monsters[index]
             let annotation = ImageAnnotation()
-            annotation.coordinate = RandomCoordinatesGenerator.generate(min: 30, max: 200, currentLocation: location)
+            annotation.coordinate = RandomCoordinatesGenerator.generate(min: 50, max: 500, currentLocation: location)
             annotation.image = UIImage(named: monster.assetName)
             annotation.title = monster.name
             annotation.subtitle = "\(monster.lvl) lvl"
