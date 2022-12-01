@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A7D51AF29393325006DC9E5 /* choozie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51AE29393325006DC9E5 /* choozie.usdz */; };
+		3A7D51B529393B74006DC9E5 /* knuckle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51B429393B74006DC9E5 /* knuckle.usdz */; };
+		3A7D51B929393D53006DC9E5 /* broodmother.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51B829393D53006DC9E5 /* broodmother.usdz */; };
+		3A7D51BD29393ED2006DC9E5 /* tautau.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51BC29393ED2006DC9E5 /* tautau.usdz */; };
+		3A7D51C129393FC4006DC9E5 /* imp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51C029393FC4006DC9E5 /* imp.usdz */; };
+		3A7D51C5293941BB006DC9E5 /* nevery.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51C4293941BB006DC9E5 /* nevery.usdz */; };
+		3A7D51C72939425B006DC9E5 /* druke.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51C62939425B006DC9E5 /* druke.usdz */; };
 		3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88516929323ED500FA16E8 /* AppDelegate.swift */; };
 		3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517229323ED700FA16E8 /* Assets.xcassets */; };
 		3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517429323ED700FA16E8 /* LaunchScreen.storyboard */; };
@@ -22,12 +29,6 @@
 		3A8851C529354BB600FA16E8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C429354BB600FA16E8 /* AlertView.swift */; };
 		3A8851C82935637F00FA16E8 /* GenerateRandomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */; };
 		3A8851CE29366A8A00FA16E8 /* ImageAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851CD29366A8A00FA16E8 /* ImageAnnotations.swift */; };
-		3A8851D829368E2100FA16E8 /* broodmother.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D129368E2000FA16E8 /* broodmother.usdz */; };
-		3A8851D929368E2100FA16E8 /* nevery.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D229368E2000FA16E8 /* nevery.usdz */; };
-		3A8851DB29368E2100FA16E8 /* choozie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D429368E2100FA16E8 /* choozie.usdz */; };
-		3A8851DC29368E2100FA16E8 /* knuckle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D529368E2100FA16E8 /* knuckle.usdz */; };
-		3A8851DD29368E2100FA16E8 /* imp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D629368E2100FA16E8 /* imp.usdz */; };
-		3A8851DE29368E2100FA16E8 /* tautau.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A8851D729368E2100FA16E8 /* tautau.usdz */; };
 		3A8851E12936904700FA16E8 /* MonsterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E02936904700FA16E8 /* MonsterModel.swift */; };
 		3A8851E42936916A00FA16E8 /* MonstersCatched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851E32936916A00FA16E8 /* MonstersCatched.swift */; };
 		3A8851F12936A79300FA16E8 /* MonstersCatchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8851EF2936A79300FA16E8 /* MonstersCatchedViewController.swift */; };
@@ -38,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A7D51AE29393325006DC9E5 /* choozie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = choozie.usdz; sourceTree = "<group>"; };
+		3A7D51B429393B74006DC9E5 /* knuckle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = knuckle.usdz; sourceTree = "<group>"; };
+		3A7D51B829393D53006DC9E5 /* broodmother.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = broodmother.usdz; sourceTree = "<group>"; };
+		3A7D51BC29393ED2006DC9E5 /* tautau.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tautau.usdz; sourceTree = "<group>"; };
+		3A7D51C029393FC4006DC9E5 /* imp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = imp.usdz; sourceTree = "<group>"; };
+		3A7D51C4293941BB006DC9E5 /* nevery.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = nevery.usdz; sourceTree = "<group>"; };
+		3A7D51C62939425B006DC9E5 /* druke.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = druke.usdz; sourceTree = "<group>"; };
 		3A88516629323ED500FA16E8 /* Moster Busters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moster Busters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88516929323ED500FA16E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A88517229323ED700FA16E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,12 +62,6 @@
 		3A8851C429354BB600FA16E8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		3A8851C72935637F00FA16E8 /* GenerateRandomAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomAnnotations.swift; sourceTree = "<group>"; };
 		3A8851CD29366A8A00FA16E8 /* ImageAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnnotations.swift; sourceTree = "<group>"; };
-		3A8851D129368E2000FA16E8 /* broodmother.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = broodmother.usdz; sourceTree = "<group>"; };
-		3A8851D229368E2000FA16E8 /* nevery.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = nevery.usdz; sourceTree = "<group>"; };
-		3A8851D429368E2100FA16E8 /* choozie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = choozie.usdz; sourceTree = "<group>"; };
-		3A8851D529368E2100FA16E8 /* knuckle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = knuckle.usdz; sourceTree = "<group>"; };
-		3A8851D629368E2100FA16E8 /* imp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = imp.usdz; sourceTree = "<group>"; };
-		3A8851D729368E2100FA16E8 /* tautau.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tautau.usdz; sourceTree = "<group>"; };
 		3A8851E02936904700FA16E8 /* MonsterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterModel.swift; sourceTree = "<group>"; };
 		3A8851E32936916A00FA16E8 /* MonstersCatched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersCatched.swift; sourceTree = "<group>"; };
 		3A8851EF2936A79300FA16E8 /* MonstersCatchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersCatchedViewController.swift; sourceTree = "<group>"; };
@@ -132,12 +134,13 @@
 		3A8851A12933C61300FA16E8 /* Monsters3DModels */ = {
 			isa = PBXGroup;
 			children = (
-				3A8851D129368E2000FA16E8 /* broodmother.usdz */,
-				3A8851D429368E2100FA16E8 /* choozie.usdz */,
-				3A8851D629368E2100FA16E8 /* imp.usdz */,
-				3A8851D529368E2100FA16E8 /* knuckle.usdz */,
-				3A8851D229368E2000FA16E8 /* nevery.usdz */,
-				3A8851D729368E2100FA16E8 /* tautau.usdz */,
+				3A7D51AE29393325006DC9E5 /* choozie.usdz */,
+				3A7D51B829393D53006DC9E5 /* broodmother.usdz */,
+				3A7D51C4293941BB006DC9E5 /* nevery.usdz */,
+				3A7D51BC29393ED2006DC9E5 /* tautau.usdz */,
+				3A7D51C62939425B006DC9E5 /* druke.usdz */,
+				3A7D51C029393FC4006DC9E5 /* imp.usdz */,
+				3A7D51B429393B74006DC9E5 /* knuckle.usdz */,
 				3A8851A82933DCBB00FA16E8 /* robbie.usdz */,
 			);
 			path = Monsters3DModels;
@@ -309,20 +312,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8851DE29368E2100FA16E8 /* tautau.usdz in Resources */,
-				3A8851D929368E2100FA16E8 /* nevery.usdz in Resources */,
-				3A8851DB29368E2100FA16E8 /* choozie.usdz in Resources */,
-				3A8851DD29368E2100FA16E8 /* imp.usdz in Resources */,
+				3A7D51C129393FC4006DC9E5 /* imp.usdz in Resources */,
 				3A8851A92933DCBB00FA16E8 /* robbie.usdz in Resources */,
+				3A7D51C5293941BB006DC9E5 /* nevery.usdz in Resources */,
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
-				3A8851DC29368E2100FA16E8 /* knuckle.usdz in Resources */,
+				3A7D51AF29393325006DC9E5 /* choozie.usdz in Resources */,
 				3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */,
 				3A8851F72936A8B700FA16E8 /* MonsterCell.xib in Resources */,
 				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
-				3A8851D829368E2100FA16E8 /* broodmother.usdz in Resources */,
+				3A7D51B529393B74006DC9E5 /* knuckle.usdz in Resources */,
 				3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */,
+				3A7D51C72939425B006DC9E5 /* druke.usdz in Resources */,
+				3A7D51B929393D53006DC9E5 /* broodmother.usdz in Resources */,
 				3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */,
 				3A8851F22936A79300FA16E8 /* MonstersCatchedViewController.xib in Resources */,
+				3A7D51BD29393ED2006DC9E5 /* tautau.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
