@@ -153,8 +153,10 @@ private extension CatchMonsterViewController {
                     entity.generateCollisionShapes(recursive: true)
                     entity.position = [0, 0, -1]
                     anchor.addChild(entity)
-                    let animation = entity.availableAnimations[0]
-                    entity.playAnimation(animation.repeat(duration: .infinity))
+                    if entity.availableAnimations.count > 0 {
+                        let animation = entity.availableAnimations[0]
+                        entity.playAnimation(animation.repeat(duration: .infinity))
+                    }
                     let entityBoundingBox = entity.visualBounds(relativeTo: anchor)
                     let boundingRadius = entityBoundingBox.boundingRadius * 2
                     print(boundingRadius)
