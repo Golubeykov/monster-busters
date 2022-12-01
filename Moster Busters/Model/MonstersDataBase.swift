@@ -17,7 +17,11 @@ enum MonstersDataBase {
         Monster(name: "Knuckle", assetName: "knuckle"),
         Monster(name: "Tautau", assetName: "tautau"),
         Monster(name: "Nevery", assetName: "nevery"),
-        Monster(name: "Druke", assetName: "druke")
+        Monster(name: "Druke", assetName: "druke"),
+        Monster(name: "Vampire", assetName: "vampire"),
+        Monster(name: "Hoo-hoo", assetName: "hoohoo"),
+        Monster(name: "Pikachu", assetName: "pikachu"),
+        Monster(name: "Drummer", assetName: "drummer")
     ]
 
     static func returnSixRandomMonstersFromBase() -> [Monster] {

@@ -14,6 +14,10 @@
 		3A7D51C129393FC4006DC9E5 /* imp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51C029393FC4006DC9E5 /* imp.usdz */; };
 		3A7D51C5293941BB006DC9E5 /* nevery.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51C4293941BB006DC9E5 /* nevery.usdz */; };
 		3A7D51C72939425B006DC9E5 /* druke.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51C62939425B006DC9E5 /* druke.usdz */; };
+		3A7D51CB2939478D006DC9E5 /* vampire.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51CA2939478D006DC9E5 /* vampire.usdz */; };
+		3A7D51CF29394A52006DC9E5 /* pikachu.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51CE29394A52006DC9E5 /* pikachu.usdz */; };
+		3A7D51D329394CB1006DC9E5 /* drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51D229394CB1006DC9E5 /* drummer.usdz */; };
+		3A7D51D729394DD8006DC9E5 /* hoohoo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D51D629394DD8006DC9E5 /* hoohoo.usdz */; };
 		3A88516A29323ED500FA16E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88516929323ED500FA16E8 /* AppDelegate.swift */; };
 		3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517229323ED700FA16E8 /* Assets.xcassets */; };
 		3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88517429323ED700FA16E8 /* LaunchScreen.storyboard */; };
@@ -46,6 +50,10 @@
 		3A7D51C029393FC4006DC9E5 /* imp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = imp.usdz; sourceTree = "<group>"; };
 		3A7D51C4293941BB006DC9E5 /* nevery.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = nevery.usdz; sourceTree = "<group>"; };
 		3A7D51C62939425B006DC9E5 /* druke.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = druke.usdz; sourceTree = "<group>"; };
+		3A7D51CA2939478D006DC9E5 /* vampire.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = vampire.usdz; sourceTree = "<group>"; };
+		3A7D51CE29394A52006DC9E5 /* pikachu.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pikachu.usdz; sourceTree = "<group>"; };
+		3A7D51D229394CB1006DC9E5 /* drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = drummer.usdz; sourceTree = "<group>"; };
+		3A7D51D629394DD8006DC9E5 /* hoohoo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = hoohoo.usdz; sourceTree = "<group>"; };
 		3A88516629323ED500FA16E8 /* Moster Busters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moster Busters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88516929323ED500FA16E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A88517229323ED700FA16E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,9 +145,13 @@
 				3A7D51AE29393325006DC9E5 /* choozie.usdz */,
 				3A7D51B829393D53006DC9E5 /* broodmother.usdz */,
 				3A7D51C4293941BB006DC9E5 /* nevery.usdz */,
+				3A7D51D629394DD8006DC9E5 /* hoohoo.usdz */,
+				3A7D51CA2939478D006DC9E5 /* vampire.usdz */,
 				3A7D51BC29393ED2006DC9E5 /* tautau.usdz */,
 				3A7D51C62939425B006DC9E5 /* druke.usdz */,
+				3A7D51D229394CB1006DC9E5 /* drummer.usdz */,
 				3A7D51C029393FC4006DC9E5 /* imp.usdz */,
+				3A7D51CE29394A52006DC9E5 /* pikachu.usdz */,
 				3A7D51B429393B74006DC9E5 /* knuckle.usdz */,
 				3A8851A82933DCBB00FA16E8 /* robbie.usdz */,
 			);
@@ -316,12 +328,16 @@
 				3A8851A92933DCBB00FA16E8 /* robbie.usdz in Resources */,
 				3A7D51C5293941BB006DC9E5 /* nevery.usdz in Resources */,
 				3A88517629323ED700FA16E8 /* LaunchScreen.storyboard in Resources */,
+				3A7D51CF29394A52006DC9E5 /* pikachu.usdz in Resources */,
+				3A7D51CB2939478D006DC9E5 /* vampire.usdz in Resources */,
 				3A7D51AF29393325006DC9E5 /* choozie.usdz in Resources */,
 				3A8851C22935479400FA16E8 /* StartGameViewController.xib in Resources */,
 				3A8851F72936A8B700FA16E8 /* MonsterCell.xib in Resources */,
 				3A8851802932400E00FA16E8 /* CatchMonsterViewController.xib in Resources */,
 				3A7D51B529393B74006DC9E5 /* knuckle.usdz in Resources */,
+				3A7D51D329394CB1006DC9E5 /* drummer.usdz in Resources */,
 				3A8851BD293543DE00FA16E8 /* MapViewController.xib in Resources */,
+				3A7D51D729394DD8006DC9E5 /* hoohoo.usdz in Resources */,
 				3A7D51C72939425B006DC9E5 /* druke.usdz in Resources */,
 				3A7D51B929393D53006DC9E5 /* broodmother.usdz in Resources */,
 				3A88517329323ED700FA16E8 /* Assets.xcassets in Resources */,
