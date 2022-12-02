@@ -89,6 +89,7 @@ private extension CatchMonsterViewController {
     func configureAppearance() {
         configureCatchButton()
         configureCatchResultView()
+        configureCatchResultLabel()
     }
 
     func showSuccessCatchResult() {
@@ -127,6 +128,10 @@ private extension CatchMonsterViewController {
         catchResultView.alpha = 0.7
         catchResultView.layer.cornerRadius = 10
         catchResultView.isHidden = true
+    }
+
+    func configureCatchResultLabel() {
+        catchResultLabel.textColor = ColorsStorage.white
     }
 
     func configureCatchButton() {

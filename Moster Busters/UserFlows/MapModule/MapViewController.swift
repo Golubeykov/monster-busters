@@ -40,6 +40,10 @@ final class MapViewController: UIViewController {
         timer == nil ? setupTimer() : ()
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        updateLabelsColorAccordingToCurrentTheme()
+    }
+
     // MARK: - IBActions
 
 
@@ -134,6 +138,7 @@ private extension MapViewController {
     func configureAppearance() {
         configureStartButton()
         configureLabels()
+        updateLabelsColorAccordingToCurrentTheme()
     }
 
     func configureStartButton() {
@@ -238,6 +243,16 @@ extension MapViewController: MKMapViewDelegate {
         UIView.animate(withDuration: 0.3, delay: 0, animations: {
             annotationView.transform = CGAffineTransform(scaleX: 1, y: 1)
         })
+    }
+
+    func updateLabelsColorAccordingToCurrentTheme() {
+        if self.traitCollection.userInterfaceStyle == .dark {
+            timerTextLabel.textColor = ColorsStorage.white
+            timerCounterLabel.textColor = ColorsStorage.white
+        } else {
+            timerTextLabel.textColor = ColorsStorage.black
+            timerCounterLabel.textColor = ColorsStorage.black
+        }
     }
 
 }
