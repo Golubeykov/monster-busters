@@ -29,8 +29,10 @@ final class MonsterCell: UITableViewCell {
     func configure(with model: Monster) {
         monsterNameLabel.text = model.name.uppercased()
         monsterNameLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        monsterNameLabel.textColor = ColorsStorage.white
         monsterLvl.text = "\(model.lvl) LVL"
         monsterLvl.font = .systemFont(ofSize: 17, weight: .bold)
+        monsterLvl.textColor = ColorsStorage.white
         monsterImageView.image = UIImage(named: model.assetName)
     }
 

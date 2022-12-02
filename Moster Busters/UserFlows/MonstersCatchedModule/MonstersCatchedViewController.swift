@@ -61,6 +61,8 @@ private extension MonstersCatchedViewController {
 
     func configureNavigationBar() {
         navigationItem.title = "Пойманные монстры"
+        navigationController?.navigationBar.titleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: ColorsStorage.white]
         let backButton = UIBarButtonItem(image: Constants.arrowImageForNavigationBar,
                                          style: .plain,
                                          target: navigationController,
